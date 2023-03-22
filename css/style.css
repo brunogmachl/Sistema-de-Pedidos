@@ -1,0 +1,471 @@
+/********** Template CSS **********/
+html,
+body {
+    margin: 0px;
+    max-height: 100%;
+}
+
+.table-dark {
+    font-size: 12px;
+}
+
+#produtos tr,
+#vendas tr,
+.radioVendasTr {
+    border: 1px solid rgb(151, 144, 144);
+}
+
+#clientes>tr,
+#inserirProdutoFinal>tr,
+#produtos>tr {
+    font-size: 13px;
+}
+
+.escolhaProduto div {
+    margin: 5px;
+}
+
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+
+.botao div .btn {
+    background-color: rgb(255, 105, 180);
+    margin-left: 3px;
+}
+
+@media(max-width: 1000px) {
+    .botao div .btn {
+        background-color: rgb(255, 105, 180);
+        margin-left: 3px;
+        margin: 5px;
+    }
+}
+
+/* estrutura */
+.pai {
+    display: flex;
+    flex-flow: column;
+    height: 100vh;
+    align-content: stretch;
+}
+
+
+
+
+
+.header {
+    flex-grow: 0;
+}
+
+.content {
+    flex-grow: 1;
+    display: flex;
+    flex-flow: column;
+    background-color: #FFE4E1;
+    /* border: 3px solid red; */
+
+
+}
+
+/* estrutura do content */
+.buscaCliente {
+    flex-grow: 1;
+    white-space: nowrap;
+    max-height: 120px;
+    min-height: 120px;
+    overflow-y: auto;
+    overflow-x: auto;
+    background-color: white;
+    margin: 5px;
+    /* border: 3px solid red; */
+}
+
+.filterVenda {
+    flex-grow: 1;
+    white-space: nowrap;
+    max-height: 50%;
+    overflow-y: auto;
+    overflow-x: auto;
+    background-color: white;
+    margin: 5px;
+    /* border: 3px solid red; */
+}
+
+.filtroSelect {
+    display: flex;
+    margin: 5px;
+    justify-content: end;
+    /* border: 3px solid red; */
+}
+
+/* ULTIMA DIV */
+.relatorioProdutoEscolhido {
+    display: flex;
+    flex-direction: column;
+    /* flex-grow: 1; */
+    margin: 5px;
+    background-color: rgb(255, 255, 255);
+    flex-wrap: wrap;
+    margin-top: 0px;
+    /* border: 3px solid red; */
+}
+
+.relatorioProdutoEscolhido label {
+    font-size: 15px;
+}
+
+.relatorioProdutoEscolhido input {
+    height: 25px;
+    width: 135px;
+}
+
+/* DIV PAI DA DIV DO MEIO */
+.escolhaProduto {
+    display: flex;
+    flex-grow: 0;
+    margin-top: 0px;
+    /* border: 3px solid red; */
+    flex-wrap: wrap;
+}
+
+.buscaProduto {
+    flex-grow: 2;
+    width: 30%;
+    white-space: nowrap;
+    /* max-height: 160px;
+    min-height: 160px; */
+    height: 160px;
+    overflow-y: auto;
+    overflow-x: auto;
+    background-color: white;
+    /* border: 3px solid red; */
+}
+
+.addRemove {
+    display: flex;
+    flex-flow: column;
+    /* border: 3px solid red; */
+}
+
+.produtoFinal {
+    flex-grow: 2;
+    /* max-height: 160px; */
+    height: 160px;
+    /* white-space: nowrap; */
+    width: 30%;
+    /* overflow-y: auto; */
+    overflow-y: scroll;
+    background-color: white;
+    /* border: 3px solid red; */
+}
+
+.relatorioProdutoEscolhido select {
+    height: 28px;
+    border-radius: 10px;
+}
+
+option {
+    padding: 0px;
+}
+
+.primeiraLinha {
+    margin: 5px 5px;
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.segundaLinha {
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.terceiraLinha {
+    flex-grow: 1;
+    margin: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 0px;
+}
+
+.inputAutomatico {
+    border-radius: 10px;
+    background-color: rgb(240, 228, 228);
+    border: 1px solid rgb(129, 117, 117);
+}
+
+.inputManual {
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid rgb(129, 117, 117);
+}
+
+.campoObservacao {
+    width: 70%;
+    display: flex;
+    text-align: center;
+    flex-grow: 5;
+    border: 1px solid blue;
+}
+
+.BotaoCadastrar {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+
+}
+
+.observacaoTextArea {
+    width: 100%;
+    height: 100%;
+
+}
+
+.observacao {
+    width: 100%;
+}
+
+#dataEntrega {
+    width: 190px;
+}
+
+.botaoEditar {
+    background-color: rgb(255, 225, 127);
+}
+
+#filterCliente,
+#filterProduto {
+    margin-left: 5px;
+}
+
+#filterCliente {
+    margin-top: 5px;
+}
+
+#buscarVenda,
+#filterVenda {
+    max-width: 100%;
+    max-height: 406px;
+    height: 100%;
+    overflow-y: auto;
+    background-color: #eee;
+}
+
+#buscarVendaForm {
+    max-width: 100%;
+    max-height: 316px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    /* border-radius:10px;; */
+    background-color: #eee;
+}
+
+
+thead {
+    position: sticky;
+    width: 100%;
+    border: 1px solid rgb(151, 144, 144);
+
+}
+
+table {
+    position: relative;
+}
+
+#filterVendaInput,
+img,
+#filterCliente,
+#filterProduto {
+    border-radius: 10px;
+}
+
+.cadastrar {
+    background-color: antiquewhite;
+
+}
+
+
+.primeiroFilhoPai {
+    color: rgb(226, 179, 186);
+
+}
+
+.quebra div span {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+
+}
+
+.quebra {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+
+.verificar>.row {
+    border-bottom: 1px solid #cac7c7
+}
+
+.verificar>.row>div>span>b {
+    font-size: 20px;
+    color: rgb(10, 10, 10);
+    font-family: serif;
+}
+
+.verificar>.row>div>span>span {
+    color: rgb(46, 34, 34);
+    font-family: serif;
+}
+
+.modal-content {
+    background-color: rgb(243, 198, 222);
+}
+
+/* tela de login */
+.divider:after,
+.divider:before {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #eee;
+}
+
+.h-custom {
+    height: calc(100% - 73px);
+}
+
+@media (max-width: 450px) {
+    .h-custom {
+        height: 100%;
+    }
+}
+
+/* .obrigatorio {
+    color: black;
+} */
+
+thead {
+    background-color: rgb(85, 76, 76);
+}
+
+thead>tr>th {
+    color: rgb(235, 139, 15);
+}
+
+#consultarVenda tr:nth-child(even) {
+    background: lightgray;
+}
+
+.consultarVenda {
+    max-height: 300px;
+}
+
+
+#dataDaVenda {
+    width: 160px;
+}
+
+/* datatables */
+table.dataTable tr.dt-hasChild td.dt-control:before {
+    content: "-";
+    background-color: #c7a4a4
+}
+
+table.dataTable {
+    width: 100%;
+    margin: 0 auto;
+    clear: both;
+    border-collapse: separate;
+    border-spacing: 0
+}
+
+.recibo-modal {
+    background-color: #f3d5d5;
+    /* width: 450PX; */
+
+}
+
+.recibo td,
+.fiscal td {
+    /* border: 1px solid #000000; */
+    color: black;
+    font-size: 12px;
+    font-family: TimesNewRoman;
+    border-collapse: collapse;
+}
+
+.recibo tr td {
+    max-width: 220px;
+    font-size: 14px;
+    word-wrap: break-word;
+}
+
+.fiscal tr td {
+    /* width: 345px; */
+    font-size: 14px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+.titulo {
+    font-size: 12px;
+}
+
+#scrollRelatorios {
+    max-height: 470px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    /* background-color: #FFE4E1; */
+}
+
+.cabecalho {
+    text-align: center;
+}
+
+.produtosNotaFiscal {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    font-weight: 500
+}
+
+
+/* SE APLICA A TELAS COM HEIGTH MAIORES QUE 620PX */
+@media(min-height: 620px) {
+    .relatorioProdutoEscolhido {
+        height: 190px;
+        margin-top: 50px;
+
+    }
+
+    .escolhaProduto {
+        height: 180px;
+    }
+
+    .buscaProduto,
+    .produtoFinal {
+        height: 100%;
+    }
+
+    .filterVenda {
+        margin-top: 40px;
+    }
+
+    /* .content{
+        margin-top: 1000px;
+    } */
+}
